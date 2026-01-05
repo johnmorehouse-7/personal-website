@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode `en` }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  {{ $css := resources.Get "css/main.css" | minify }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="{{ "/" | relURL }}" class="site-title">{{ site.Title }}</a>
+      <nav>
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+      </nav>
+    </div>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    <div class="container">
+      {{ site.Params.footer | default (printf "© %d %s" now.Year site.Title) }}
+    </div>
+  </footer>
+</body>
+</html>

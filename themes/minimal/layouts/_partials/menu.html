@@ -1,0 +1,22 @@
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  <ul>
+    {{- range . }}
+      {{- $attrs := dict "href" .URL }}
+      {{- if $page.IsMenuCurrent .Menu . }}
+        {{- $attrs = merge $attrs (dict "class" "active") }}
+      {{- end }}
+      <li>
+        <a
+          {{- range $k, $v := $attrs }}
+            {{- with $v }}
+              {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+            {{- end }}
+          {{- end -}}
+        >{{ .Name }}</a>
+      </li>
+    {{- end }}
+  </ul>
+{{- end }}

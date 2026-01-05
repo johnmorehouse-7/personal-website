@@ -1,0 +1,38 @@
+baseURL = 'https://johnmorehouse.com/'
+languageCode = 'en-us'
+title = 'John Morehouse'
+theme = 'minimal'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  name = "John Morehouse"
+  greeting = "Hey, I'm"
+  tagline = "Economist working on real estate, climate risk, and insurance."
+  description = "Personal website of John Morehouse - economist and researcher."
+  profile_image = "/images/profile.png"
+
+  [params.social]
+    email = "john.morehouse7@gmail.com"
+    linkedin = "https://www.linkedin.com/in/johnmorehouse"
+    github = "https://github.com/johnmorehouse-7"
+    substack = "https://morehouses.substack.com/"
+    # twitter = "https://twitter.com/yourhandle"
+
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+
+[[menus.main]]
+  name = "CV"
+  url = "/files/cv.pdf"
+  weight = 2
+
+[[menus.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 3

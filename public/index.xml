@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on John Morehouse</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on John Morehouse</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 3</title>
+      <link>http://localhost:1313/posts/post-3/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/post-3/</guid>
+      <description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 2</title>
+      <link>http://localhost:1313/posts/post-2/</link>
+      <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/post-2/</guid>
+      <description>&lt;p&gt;Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&lt;/p&gt;&#xA;&lt;p&gt;Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>http://localhost:1313/posts/post-1/</link>
+      <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/post-1/</guid>
+      <description>&lt;p&gt;Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&lt;/p&gt;&#xA;&lt;p&gt;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I am an economist currently working on a &amp;ldquo;stealth&amp;rdquo; startup in the resiliency space. I&amp;rsquo;ll have more on that soon.&lt;/p&gt;&#xA;&lt;p&gt;I am originally from Petaluma, CA. I received my B.S, M.S, and Ph.D from the University of Oregon. Before the startup, I was at Freddie Mac working on climate risk. During the Summer of 2021, I was a dissertation intern at the Federal Reserve Bank of San Francisco. I spent the Summer of 2020 with Vivid Economics as an intern and continued as a freelance economist for the remainder of the year. At Vivid, I led the development of demand projections for a global energy model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;p&gt;Want to chat about research, collaboration, or just say hi? I&amp;rsquo;d love to hear from you.&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-in-touch&#34;&gt;Get in Touch&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:john.morehouse7@gmail.com&#34;&gt;john.morehouse7@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=&#34;https://www.linkedin.com/in/johnmorehouse&#34;&gt;linkedin.com/in/johnmorehouse&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href=&#34;https://github.com/johnmorehouse-7&#34;&gt;github.com/johnmorehouse-7&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Substack:&lt;/strong&gt; &lt;a href=&#34;https://morehouses.substack.com/&#34;&gt;morehouses.substack.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CV</title>
+      <link>http://localhost:1313/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/cv/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/files/cv.pdf&#34; class=&#34;btn&#34; target=&#34;_blank&#34;&gt;Download CV (PDF)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;PhD in Economics&lt;/strong&gt; — University of Oregon &lt;em&gt;(June 2022)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;MS in Economics&lt;/strong&gt; — University of Oregon &lt;em&gt;(December 2018)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;BS in Economics &amp;amp; Minor in Mathematics&lt;/strong&gt; — University of Oregon &lt;em&gt;(June 2016)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;research-interests&#34;&gt;Research Interests&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Environmental Economics&lt;/li&gt;&#xA;&lt;li&gt;Urban Economics&lt;/li&gt;&#xA;&lt;li&gt;Labor Economics&lt;/li&gt;&#xA;&lt;li&gt;Real Estate Markets&lt;/li&gt;&#xA;&lt;li&gt;Climate Risk&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;professional-experience&#34;&gt;Professional Experience&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Freddie Mac&lt;/strong&gt; — Senior Economist, Single-Family Climate Risk &lt;em&gt;(August 2023 - August 2024)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Led cross-divisional climate risk initiatives and served as technical subject matter expert on natural disaster risk assessment, translating complex catastrophe modeling insights into actionable policy recommendations for executive leadership.&lt;/li&gt;&#xA;&lt;li&gt;Designed and implemented comprehensive methodology integrating flood, hurricane, and wildfire risk data with financial models to assess regional impacts across diverse geographic contexts, directly informing risk management strategies for properties nationwide.&lt;/li&gt;&#xA;&lt;li&gt;Developed scalable risk assessment frameworks for natural disaster impacts on financial outcomes, collaborating with business and modeling teams to integrate findings into enterprise-wide credit risk models affecting multi-trillion dollar portfolio.&lt;/li&gt;&#xA;&lt;li&gt;Conducted analysis of energy efficiency building codes and their impacts on borrower financial outcomes and property valuations, demonstrating ability to bridge technical analysis with policy implementation considerations.&lt;/li&gt;&#xA;&lt;li&gt;Managed technical workstreams and mentored junior analysts while ensuring quality delivery of complex projects, including deployment of cloud computing infrastructure and version control systems for team of 10+ people.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Freddie Mac&lt;/strong&gt; — Senior Quantitative Analyst, Model Risk Management &lt;em&gt;(August 2022 - August 2023)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

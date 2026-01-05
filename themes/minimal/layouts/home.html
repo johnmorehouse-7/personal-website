@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="hero">
+  {{ with site.Params.profile_image }}
+  <img src="{{ . }}" alt="{{ site.Title }}" class="profile-img">
+  {{ end }}
+  <h1>{{ site.Params.greeting | default "Hey, I'm" }} {{ site.Params.name | default site.Title }}</h1>
+  <p class="tagline">{{ site.Params.tagline }}</p>
+  <div class="intro">
+    {{ .Content }}
+  </div>
+  {{ with site.Params.social }}
+  <div class="social-links">
+    {{ with .email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+    {{ with .linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+    {{ with .github }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+    {{ with .substack }}<a href="{{ . }}" target="_blank" rel="noopener">Substack</a>{{ end }}
+    {{ with .twitter }}<a href="{{ . }}" target="_blank" rel="noopener">Twitter</a>{{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}
