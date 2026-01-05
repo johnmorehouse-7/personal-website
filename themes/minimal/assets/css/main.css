@@ -175,12 +175,12 @@ a:hover {
   max-width: 100%;
 }
 
-.content ul, .content ol {
+.content ul, .content ol, .intro ul, .intro ol {
   margin-left: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.content li {
+.content li, .intro li {
   margin-bottom: 0.5rem;
 }
 

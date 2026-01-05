@@ -58,7 +58,7 @@ Won "Best Graduate Student Research Paper" award (University of Oregon)
 **In Search of Peace and Quiet: The Heterogeneous Impacts of Short-Term Rentals on Housing Prices**
 *with Brett Garcia and Keaton Miller*
 
-**Labor Market Power in a Spatial Equilibrium**
+**Labor Market Power and Spatial Policies**
 *with Claudio Luccioletti and Sophie Mathes*
 [Draft](https://cdn.sanity.io/files/l721pa75/production/39b32e107554e81d2f34b5c63bd6fd10155dcc9f.pdf)
 
