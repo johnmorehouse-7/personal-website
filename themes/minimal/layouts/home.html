@@ -3,7 +3,7 @@
   {{ with site.Params.profile_image }}
   <img src="{{ . }}" alt="{{ site.Title }}" class="profile-img">
   {{ end }}
-  <h1>{{ site.Params.greeting | default "Hey, I'm" }} {{ site.Params.name | default site.Title }}</h1>
+  <h1>{{ site.Params.name | default site.Title }}</h1>
   <p class="tagline">{{ site.Params.tagline }}</p>
   <div class="intro">
     {{ .Content }}
