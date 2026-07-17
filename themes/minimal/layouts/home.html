@@ -23,6 +23,10 @@
   {{ with site.Params.profile_image }}
   <img src="{{ . }}" alt="John Morehouse" class="hero__photo" data-reveal>
   {{ end }}
+  <a class="hero__scroll" href="#about" aria-label="Scroll to content">
+    <span class="hero__scroll-label">Scroll</span>
+    <span class="hero__scroll-line" aria-hidden="true"></span>
+  </a>
 </section>
 {{ partial "updates.html" . }}
 {{ partial "sections/about.html" . }}

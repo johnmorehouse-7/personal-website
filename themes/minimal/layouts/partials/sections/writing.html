@@ -1,5 +1,8 @@
 <section id="writing" class="section" data-reveal-group aria-labelledby="writing-h">
-  <h2 id="writing-h" class="section-title" data-reveal>Writing</h2>
+  <header class="section__head" data-reveal>
+    <span class="section__num">03</span>
+    <h2 id="writing-h" class="section__title">Writing</h2>
+  </header>
   <p class="writing-intro" data-reveal>Essays and notes, published on my <a href="{{ site.Params.social.substack }}" target="_blank" rel="noopener">Substack</a>.</p>
   {{ $items := slice }}
   {{ with (try (resources.GetRemote "https://morehouses.substack.com/feed")) }}

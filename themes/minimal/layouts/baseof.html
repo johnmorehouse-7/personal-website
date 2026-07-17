@@ -9,8 +9,8 @@
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   {{/* Publish all six faces so @font-face url("../fonts/…") resolves; preload only the two critical faces (hero name + body). */}}
-  {{ $preload := slice "source-serif-4-700" "inter-400" }}
-  {{ range slice "source-serif-4-400" "source-serif-4-600" "source-serif-4-700" "inter-400" "inter-500" "inter-600" }}
+  {{ $preload := slice "space-grotesk-700" "inter-400" }}
+  {{ range slice "space-grotesk-400" "space-grotesk-500" "space-grotesk-700" "inter-400" "inter-500" "inter-600" }}
     {{ with resources.Get (printf "fonts/%s.woff2" .) }}
       {{ .Publish }}
     {{ end }}

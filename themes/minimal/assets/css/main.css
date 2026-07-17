@@ -1,7 +1,7 @@
 /* ---- Fonts (self-hosted) ---- */
-@font-face { font-family: "Display"; src: url("../fonts/source-serif-4-400.woff2") format("woff2"); font-weight: 400; font-display: swap; font-style: normal; }
-@font-face { font-family: "Display"; src: url("../fonts/source-serif-4-600.woff2") format("woff2"); font-weight: 600; font-display: swap; font-style: normal; }
-@font-face { font-family: "Display"; src: url("../fonts/source-serif-4-700.woff2") format("woff2"); font-weight: 700; font-display: swap; font-style: normal; }
+@font-face { font-family: "Display"; src: url("../fonts/space-grotesk-400.woff2") format("woff2"); font-weight: 400; font-display: swap; font-style: normal; }
+@font-face { font-family: "Display"; src: url("../fonts/space-grotesk-500.woff2") format("woff2"); font-weight: 500; font-display: swap; font-style: normal; }
+@font-face { font-family: "Display"; src: url("../fonts/space-grotesk-700.woff2") format("woff2"); font-weight: 700; font-display: swap; font-style: normal; }
 @font-face { font-family: "Body"; src: url("../fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-display: swap; font-style: normal; }
 @font-face { font-family: "Body"; src: url("../fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-display: swap; font-style: normal; }
 @font-face { font-family: "Body"; src: url("../fonts/inter-600.woff2") format("woff2"); font-weight: 600; font-display: swap; font-style: normal; }
@@ -14,7 +14,7 @@
   --green-hover: #084f27;
   --line: #e0dcd3;
 
-  --font-display: "Display", Georgia, "Times New Roman", serif;
+  --font-display: "Display", "Segoe UI", system-ui, sans-serif;
   --font-body: "Body", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --max-width: 960px;
@@ -68,7 +68,7 @@ button:focus-visible {
 /* Typography */
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin-bottom: 1rem;
@@ -102,16 +102,17 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Home page hero */
-.hero { display: grid; grid-template-columns: 1fr auto; gap: 2rem 3rem;
-        align-items: start; padding: 4rem 0 3rem; }
+/* Home page hero — full height, left-weighted, bottom scroll cue */
+.hero { position: relative; display: grid; grid-template-columns: 1fr auto;
+        gap: 2rem 3rem; align-items: center; align-content: center;
+        min-height: calc(100vh - 4rem); padding: 4rem 0 5rem; }
 .hero__name { font-family: var(--font-display); font-weight: 700;
-              font-size: clamp(3rem, 9vw, 6rem); line-height: 0.95;
-              letter-spacing: -0.03em; }
+              font-size: clamp(3.5rem, 12vw, 8rem); line-height: 0.92;
+              letter-spacing: -0.04em; }
 .hero__name-line { display: block; }
 .hero__tag { font-family: var(--font-display); font-size: clamp(1.25rem, 3vw, 1.75rem);
              color: var(--ink-soft); margin-top: 1.5rem; font-weight: 400; }
-.hero__cycle { color: var(--green); font-weight: 600; display: inline-block; }
+.hero__cycle { color: var(--green); font-weight: 700; display: inline-block; }
 .hero__intro { max-width: 34rem; margin-top: 1.5rem; font-size: 1.1rem; }
 .hero__intro p { margin-bottom: 1rem; }
 .hero__links { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 2rem; }
@@ -122,8 +123,25 @@ a:hover {
 .hero__links a:hover { text-decoration: none; }
 .hero__links a:hover::after { transform: scaleX(1); }
 .hero__photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+
+/* Scroll cue at the bottom of the hero */
+.hero__scroll { position: absolute; left: 0; bottom: 1.25rem;
+                display: flex; align-items: center; gap: 0.75rem;
+                color: var(--ink-soft); }
+.hero__scroll-label { font-family: var(--font-body); font-size: 0.72rem;
+                      text-transform: uppercase; letter-spacing: 0.18em; font-weight: 600; }
+.hero__scroll-line { position: relative; width: 1px; height: 2.5rem;
+                     background: var(--line); overflow: hidden; }
+.hero__scroll-line::after { content: ""; position: absolute; left: 0; top: 0;
+                            width: 1px; height: 40%; background: var(--green);
+                            animation: scroll-cue 1.8s var(--ease) infinite; }
+@keyframes scroll-cue {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(250%); }
+}
+
 @media (max-width: 640px) {
-  .hero { grid-template-columns: 1fr; padding: 2.5rem 0 2rem; }
+  .hero { grid-template-columns: 1fr; min-height: calc(100vh - 4rem); padding: 3rem 0 5rem; }
   .hero__photo { width: 88px; height: 88px; order: -1; }
 }
 
@@ -252,7 +270,7 @@ footer .container {
 /* Motion */
 .reveal-init {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(24px);
 }
 
 [data-reveal].is-in {
@@ -311,19 +329,59 @@ footer .container {
 }
 
 .section {
-  margin-top: 6rem;
+  margin-top: 0;
+  padding-top: 6rem;
 }
 
-/* Quiet, understated section label (matches the updates label) so the page
-   reads as one continuous document rather than stacked, boxed pages. */
-.section-title {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--ink-soft);
-  margin: 0 0 1.5rem;
+/* First content section: extra separation from the full-height hero. */
+.updates {
+  padding-top: 2rem;
+}
+
+/* Big numbered section header — each section reads as a distinct unit. */
+.section__head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0 0 2rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+.section__head::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  background: var(--line);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease);
+}
+.section__head.is-in::after {
+  transform: scaleX(1);
+}
+.section__num {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section__head::after { transform: scaleX(1); }
 }
 
 .paper {
