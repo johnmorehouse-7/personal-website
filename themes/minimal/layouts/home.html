@@ -5,26 +5,22 @@
       <span class="hero__name-line">John</span>
       <span class="hero__name-line">Morehouse</span>
     </h1>
-    <div class="hero__introRow" data-reveal>
-      {{ with site.Params.profile_image }}<img src="{{ . }}" alt="John Morehouse" class="hero__photo">{{ end }}
-      <div class="hero__introCol">
-        <p class="hero__tag">
-          economist working on
-          <span class="hero__cycle" data-cycle>{{ index site.Params.roles 0 }}</span>
-        </p>
-        <div class="hero__intro">{{ .Content }}</div>
-        {{ with site.Params.social }}
-        <nav class="hero__links" aria-label="Profiles">
-          {{ with .email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
-          {{ with .linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
-          {{ with .github }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
-          {{ with .substack }}<a href="{{ . }}" target="_blank" rel="noopener">Substack</a>{{ end }}
-          <a href="/files/cv.pdf">CV</a>
-        </nav>
-        {{ end }}
-      </div>
-    </div>
+    <p class="hero__tag" data-reveal>
+      economist working on
+      <span class="hero__cycle" data-cycle>{{ index site.Params.roles 0 }}</span>
+    </p>
+    <div class="hero__intro" data-reveal>{{ .Content }}</div>
+    {{ with site.Params.social }}
+    <nav class="hero__links" data-reveal aria-label="Profiles">
+      {{ with .email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+      {{ with .linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+      {{ with .github }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+      {{ with .substack }}<a href="{{ . }}" target="_blank" rel="noopener">Substack</a>{{ end }}
+      <a href="/files/cv.pdf">CV</a>
+    </nav>
+    {{ end }}
   </div>
+  {{ with site.Params.profile_image }}<img src="{{ . }}" alt="John Morehouse" class="hero__photo" data-reveal>{{ end }}
   <a class="hero__scroll" href="#about" aria-label="Scroll to content">
     <span class="hero__scroll-label">Scroll</span>
     <span class="hero__scroll-line" aria-hidden="true"></span>
