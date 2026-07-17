@@ -403,3 +403,44 @@ footer .container {
   color: #fff;
   text-decoration: none;
 }
+
+.writing-intro {
+  color: var(--ink-soft);
+  max-width: 42rem;
+  margin-bottom: 2.5rem;
+}
+
+.posts {
+  list-style: none;
+}
+
+.post {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.post__title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 0.25rem;
+  text-decoration: none;
+}
+
+.post:hover .post__title {
+  color: var(--green);
+}
+
+.post__date {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.post__desc {
+  color: var(--ink-soft);
+  max-width: 42rem;
+  margin-top: 0.5rem;
+}
