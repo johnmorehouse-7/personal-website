@@ -20,6 +20,8 @@
       {{ end }}
     {{ end }}
   {{ end }}
+  {{/* No-JS safety net: reveal content never depends on JS for visibility. */}}
+  <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
   <header>

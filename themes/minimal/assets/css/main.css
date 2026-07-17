@@ -125,6 +125,16 @@ nav a.active {
   color: var(--green);
 }
 
+/* Keyboard focus indicator (keyboard nav only, not mouse clicks) */
+a:focus-visible,
+.btn:focus-visible,
+.btn-ghost:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* Typography */
 h1, h2, h3 {
   font-family: var(--font-display);
