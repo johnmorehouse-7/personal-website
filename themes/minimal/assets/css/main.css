@@ -124,7 +124,7 @@ a:hover {
   transition: transform 0.3s var(--ease); }
 .hero__links a:hover { text-decoration: none; }
 .hero__links a:hover::after { transform: scaleX(1); }
-.hero__photo { width: 128px; height: 128px; border-radius: 50%; object-fit: cover;
+.hero__photo { width: 168px; height: 168px; border-radius: 50%; object-fit: cover;
                flex-shrink: 0; }
 
 /* Scroll cue at the bottom of the hero */

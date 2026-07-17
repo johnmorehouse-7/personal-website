@@ -10,8 +10,8 @@
       <span class="hero__cycle" data-cycle>{{ index site.Params.roles 0 }}</span>
     </p>
     <div class="hero__introRow" data-reveal>
-      {{ with site.Params.profile_image }}<img src="{{ . }}" alt="John Morehouse" class="hero__photo">{{ end }}
       <div class="hero__intro">{{ .Content }}</div>
+      {{ with site.Params.profile_image }}<img src="{{ . }}" alt="John Morehouse" class="hero__photo">{{ end }}
     </div>
     {{ with site.Params.social }}
     <nav class="hero__links" data-reveal aria-label="Profiles">
