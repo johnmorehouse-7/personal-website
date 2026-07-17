@@ -1,7 +1,6 @@
 # Research list. `order` controls display order (never auto-sorts).
 # Published first, then working papers. Abstracts intentionally blank for now.
-# NOTE: two external links still need URLs (marked TODO) and the four slide
-# decks (aere_pres, frb, mea, osweet) still need mapping to papers.
+# Slide decks mapped from each deck's title slide.
 
 - order: 1
   status: "Published"
@@ -12,6 +11,7 @@
   abstract: ""
   links:
     - { label: "Journal", url: "https://www.journals.uchicago.edu/doi/10.1086/740146" }
+    - { label: "Slides", url: "/files/slides/osweet.pdf" }
 
 - order: 2
   status: "Published"
@@ -21,8 +21,9 @@
   coauthors: "with Mark Colas"
   abstract: ""
   links:
-    - { label: "Journal", url: "" }  # TODO: Quantitative Economics URL
-    - { label: "Minneapolis Fed coverage", url: "" }  # TODO
+    - { label: "Journal", url: "https://onlinelibrary.wiley.com/doi/10.3982/QE1544" }
+    - { label: "Minneapolis Fed coverage", url: "https://www.minneapolisfed.org/article/2020/california-green-rush" }
+    - { label: "Slides", url: "/files/slides/aere_pres.pdf" }
 
 - order: 3
   status: "Working paper"
@@ -54,6 +55,7 @@
   abstract: ""
   links:
     - { label: "Draft", url: "/files/papers/jmp.pdf" }
+    - { label: "Slides", url: "/files/slides/frb.pdf" }
 
 - order: 6
   status: "Working paper"
@@ -64,3 +66,4 @@
   abstract: ""
   links:
     - { label: "Draft", url: "/files/papers/airbnb.pdf" }
+    - { label: "Slides", url: "/files/slides/mea.pdf" }
