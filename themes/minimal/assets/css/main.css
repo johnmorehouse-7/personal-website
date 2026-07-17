@@ -254,3 +254,50 @@ footer .container {
     justify-content: center;
   }
 }
+
+/* Motion */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+[data-reveal-group] [data-reveal]:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+[data-reveal-group] [data-reveal]:nth-child(3) {
+  transition-delay: 0.16s;
+}
+
+[data-reveal-group] [data-reveal]:nth-child(4) {
+  transition-delay: 0.24s;
+}
+
+.hero__name {
+  transform-style: preserve-3d;
+  transition: transform 0.2s var(--ease);
+}
+
+.hero__cycle {
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.hero__cycle.is-swapping {
+  opacity: 0;
+  transform: translateY(-0.4em);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
