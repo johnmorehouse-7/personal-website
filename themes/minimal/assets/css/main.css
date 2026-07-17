@@ -390,6 +390,11 @@ footer .container {
   transition: transform 0.3s var(--ease);
 }
 
+/* First paper sits right under the section header rule — avoid a double line. */
+.papers .paper:first-of-type {
+  border-top: none;
+}
+
 .paper:hover {
   transform: translateX(4px);
 }
