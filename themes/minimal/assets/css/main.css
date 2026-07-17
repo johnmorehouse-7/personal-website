@@ -201,12 +201,30 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-.content img {
+.content img:not(.photostrip img) {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 1.5rem 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* About prose spacing */
+.prose { max-width: 42rem; }
+.prose p { margin-bottom: 1rem; }
+
+/* Photo strip — curated, asymmetric (not a uniform grid) */
+.photostrip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 3rem 0 1rem; }
+.photostrip__item { overflow: hidden; border-radius: 8px; margin: 0; }
+.photostrip__item:nth-child(2), .photostrip__item:nth-child(4) { transform: translateY(2rem); }
+.photostrip__item img { width: 100%; height: 240px; object-fit: cover; display: block;
+                        transition: transform 0.5s var(--ease); }
+.photostrip__item:hover img { transform: scale(1.06); }
+.photostrip__item figcaption { font-size: 0.8rem; color: var(--ink-soft); padding: 0.5rem 0.1rem; }
+@media (max-width: 640px) {
+  .photostrip { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .photostrip__item:nth-child(2), .photostrip__item:nth-child(4) { transform: none; }
+  .photostrip__item img { height: 180px; }
 }
 
 /* Contact page */

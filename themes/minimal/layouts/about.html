@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="content">
+  <h1 class="page-h" data-reveal>About</h1>
+  <div class="prose" data-reveal>
+    {{ .Content }}
+  </div>
+  <div class="photostrip" data-reveal-group aria-label="Photos">
+    <figure class="photostrip__item" data-reveal><img loading="lazy" src="/images/croatia.jpg" alt="Croatia"><figcaption>Croatia</figcaption></figure>
+    <figure class="photostrip__item" data-reveal><img loading="lazy" src="/images/lucerne.jpg" alt="Lucerne"><figcaption>Lucerne</figcaption></figure>
+    <figure class="photostrip__item" data-reveal><img loading="lazy" src="/images/gravel.jpeg" alt="Gravel riding"><figcaption>Gravel riding</figcaption></figure>
+    <figure class="photostrip__item" data-reveal><img loading="lazy" src="/images/hains.jpeg" alt="Racing at Hains Point"><figcaption>Racing at Hains Point</figcaption></figure>
+  </div>
+</article>
+{{ end }}
