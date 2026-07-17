@@ -30,6 +30,31 @@
     }, 2200);
   }
 
+  // 2b. Scrollspy — highlight the nav link for the section in view
+  const spySections = Array.from(document.querySelectorAll("main section[id]"));
+  if (spySections.length) {
+    const navLinks = new Map();
+    spySections.forEach((sec) => {
+      const link = document.querySelector(`nav a[href$="#${sec.id}"]`);
+      if (link) navLinks.set(sec.id, link);
+    });
+    let activeId = null;
+    const setActive = (id) => {
+      if (id === activeId) return;
+      activeId = id;
+      navLinks.forEach((link) => link.classList.remove("active"));
+      const link = navLinks.get(id);
+      if (link) link.classList.add("active");
+    };
+    const spy = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible.length) setActive(visible[0].target.id);
+    }, { rootMargin: "-20% 0px -70% 0px", threshold: 0 });
+    spySections.forEach((sec) => spy.observe(sec));
+  }
+
   // 3. Cursor-reactive lean on the hero name (fine pointer only)
   const name = document.querySelector(".hero__name");
   const finePointer = window.matchMedia("(pointer: fine)").matches;

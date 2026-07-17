@@ -30,6 +30,11 @@
 
 html {
   font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 body {
@@ -55,6 +60,9 @@ header {
   border-bottom: 1px solid var(--line);
   padding: 1.5rem 0;
   background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 header .container {
@@ -382,6 +390,26 @@ footer .container {
   font-size: clamp(2.5rem, 6vw, 4rem);
   letter-spacing: -0.02em;
   margin: 1rem 0 3rem;
+}
+
+/* One-page sections */
+#top {
+  scroll-margin-top: 5rem;
+}
+
+.section {
+  scroll-margin-top: 5rem;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 2rem;
 }
 
 .paper {

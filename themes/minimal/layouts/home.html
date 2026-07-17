@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section class="hero" data-reveal-group>
+<section id="top" class="hero" data-reveal-group>
   <div class="hero__text">
     <h1 class="hero__name" data-reveal>
       <span class="hero__name-line">John</span>
@@ -25,4 +25,8 @@
   {{ end }}
 </section>
 {{ partial "updates.html" . }}
+{{ partial "sections/about.html" . }}
+{{ partial "sections/research.html" . }}
+{{ partial "sections/writing.html" . }}
+{{ partial "sections/contact.html" . }}
 {{ end }}

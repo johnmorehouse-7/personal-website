@@ -1,5 +1,8 @@
 ---
 title: "Contact"
+_build:
+  render: never
+  list: never
 ---
 
 Want to chat about research, collaboration, or just say hi? I'd love to hear from you.

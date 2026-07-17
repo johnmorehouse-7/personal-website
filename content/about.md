@@ -1,6 +1,8 @@
 ---
 title: "About"
-layout: about
+_build:
+  render: never
+  list: never
 ---
 
 I am originally from Petaluma, CA. I'm currently Head of Analytics at [Zephyr Resilience](https://www.zephyrresilience.com/), a new company focused on scaling resilient home upgrades. I received my B.S, M.S, and Ph.D from the University of Oregon. During my graduate studies, I interned at the Federal Reserve Bank of San Francisco and at Vivid Economics, where I led the development of demand projections for a global energy model.
