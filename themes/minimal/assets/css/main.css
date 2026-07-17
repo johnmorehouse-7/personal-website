@@ -1,13 +1,34 @@
+/* ---- Fonts (self-hosted) ---- */
+@font-face { font-family: "Display"; src: url("../fonts/fraunces-400.woff2") format("woff2"); font-weight: 400; font-display: swap; font-style: normal; }
+@font-face { font-family: "Display"; src: url("../fonts/fraunces-600.woff2") format("woff2"); font-weight: 600; font-display: swap; font-style: normal; }
+@font-face { font-family: "Display"; src: url("../fonts/fraunces-700.woff2") format("woff2"); font-weight: 700; font-display: swap; font-style: normal; }
+@font-face { font-family: "Body"; src: url("../fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-display: swap; font-style: normal; }
+@font-face { font-family: "Body"; src: url("../fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-display: swap; font-style: normal; }
+@font-face { font-family: "Body"; src: url("../fonts/inter-600.woff2") format("woff2"); font-weight: 600; font-display: swap; font-style: normal; }
+
 :root {
-  --color-bg: #fafafa;
-  --color-text: #2d3748;
-  --color-text-muted: #64748b;
-  --color-accent: #007030;
-  --color-accent-hover: #005524;
-  --color-border: #e2e8f0;
-  --color-highlight: #f1f8f5;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --max-width: 720px;
+  --paper: #f7f5f0;
+  --ink: #16130d;
+  --ink-soft: #55504a;
+  --green: #0a6b34;
+  --green-hover: #084f27;
+  --line: #e0dcd3;
+
+  --font-display: "Display", Georgia, "Times New Roman", serif;
+  --font-body: "Body", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --max-width: 960px;
+  --space: 1.5rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Aliases for legacy component styles (rewritten by later tasks) */
+  --color-bg: var(--paper);
+  --color-text: var(--ink);
+  --color-text-muted: var(--ink-soft);
+  --color-accent: var(--green);
+  --color-accent-hover: var(--green-hover);
+  --color-border: var(--line);
+  --color-highlight: var(--paper);
 }
 
 * {
@@ -21,9 +42,9 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-sans);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
   line-height: 1.7;
   min-height: 100vh;
   display: flex;
@@ -89,8 +110,10 @@ nav a.active {
 
 /* Typography */
 h1, h2, h3 {
+  font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin-bottom: 1rem;
 }
 
@@ -112,13 +135,13 @@ p {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--green);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 a:hover {
-  color: var(--color-accent-hover);
+  color: var(--green-hover);
   text-decoration: underline;
 }
 
