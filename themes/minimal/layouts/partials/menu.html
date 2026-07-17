@@ -5,8 +5,16 @@
   <ul>
     {{- range . }}
       {{- $attrs := dict "href" .URL }}
-      {{- if $page.IsMenuCurrent .Menu . }}
-        {{- $attrs = merge $attrs (dict "class" "active") }}
+      {{- $isCurrent := or ($page.IsMenuCurrent $menuID .) ($page.HasMenuCurrent $menuID .) }}
+      {{- if and (not $isCurrent) .URL }}
+        {{- $target := strings.TrimSuffix "/" .URL }}
+        {{- $here := strings.TrimSuffix "/" $page.RelPermalink }}
+        {{- if and (ne $target "") (eq $target $here) }}
+          {{- $isCurrent = true }}
+        {{- end }}
+      {{- end }}
+      {{- if $isCurrent }}
+        {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
       {{- end }}
       <li>
         <a

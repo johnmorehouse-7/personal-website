@@ -20,15 +20,6 @@
   --max-width: 960px;
   --space: 1.5rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-
-  /* Aliases for legacy component styles (rewritten by later tasks) */
-  --color-bg: var(--paper);
-  --color-text: var(--ink);
-  --color-text-muted: var(--ink-soft);
-  --color-accent: var(--green);
-  --color-accent-hover: var(--green-hover);
-  --color-border: var(--line);
-  --color-highlight: var(--paper);
 }
 
 * {
@@ -61,9 +52,9 @@ main {
 
 /* Header */
 header {
-  border-bottom: 3px solid var(--color-accent);
+  border-bottom: 1px solid var(--line);
   padding: 1.5rem 0;
-  background: linear-gradient(to bottom, var(--color-highlight), var(--color-bg));
+  background: var(--paper);
 }
 
 header .container {
@@ -78,14 +69,17 @@ header .container {
 }
 
 .site-title {
-  font-size: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--ink);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .site-title:hover {
-  color: var(--color-accent-hover);
+  color: var(--green);
+  text-decoration: none;
 }
 
 /* Navigation */
@@ -97,15 +91,38 @@ nav ul {
 }
 
 nav a {
-  color: var(--color-text-muted);
+  position: relative;
+  color: var(--ink-soft);
   text-decoration: none;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   transition: color 0.2s;
 }
 
-nav a:hover,
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 100%;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+
+nav a:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
 nav a.active {
-  color: var(--color-accent);
+  color: var(--green);
 }
 
 /* Typography */
@@ -230,37 +247,50 @@ a:hover {
 /* Contact page */
 .contact-info {
   margin: 2rem 0;
+  max-width: 42rem;
 }
 
 .contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
   font-size: 1.05rem;
+  color: var(--ink);
 }
 
-/* CV button */
+.contact-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-item a {
+  color: var(--green);
+}
+
+.contact-item a:hover {
+  color: var(--green-hover);
+}
+
+/* CV button (primary action) */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-accent);
-  color: white;
+  padding: 0.7rem 1.4rem;
+  background: var(--green);
+  color: #fff;
   border-radius: 6px;
+  font-family: var(--font-body);
   font-weight: 500;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: background 0.2s;
 }
 
 .btn:hover {
-  background-color: var(--color-accent-hover);
-  color: white;
+  background: var(--green-hover);
+  color: #fff;
   text-decoration: none;
 }
 
 /* Footer */
 footer {
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--line);
   padding: 1.5rem 0;
   margin-top: auto;
 }
@@ -270,7 +300,8 @@ footer .container {
   margin: 0 auto;
   padding: 0 1.5rem;
   text-align: center;
-  color: var(--color-text-muted);
+  color: var(--ink-soft);
+  font-family: var(--font-body);
   font-size: 0.875rem;
 }
 
