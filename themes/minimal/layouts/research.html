@@ -1,0 +1,25 @@
+{{ define "main" }}
+<h1 class="page-h" data-reveal>Research</h1>
+<div class="papers" data-reveal-group>
+  {{ range sort site.Data.papers "order" }}
+  <article class="paper" data-reveal>
+    <div class="paper__meta">
+      {{ with .year }}<span>{{ . }}</span>{{ end }}
+      <span class="paper__status">{{ .status }}{{ with .venue }} · {{ . }}{{ end }}</span>
+    </div>
+    <h2 class="paper__title">{{ .title }}</h2>
+    {{ with .coauthors }}<p class="paper__authors">{{ . }}</p>{{ end }}
+    {{ with .award }}<p class="paper__award">★ {{ . }}</p>{{ end }}
+    {{ with .abstract }}<p class="paper__abstract">{{ . }}</p>{{ end }}
+    {{ with .links }}
+    {{ $links := where . "url" "!=" "" }}
+    {{ with $links }}
+    <div class="paper__links">
+      {{ range . }}<a class="btn-ghost" href="{{ .url }}"{{ if not (hasPrefix .url "/") }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>{{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+  </article>
+  {{ end }}
+</div>
+{{ end }}
