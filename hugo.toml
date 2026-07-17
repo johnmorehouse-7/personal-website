@@ -10,9 +10,10 @@ theme = 'minimal'
 
 [params]
   name = "John Morehouse"
-tagline = "Economist working on real estate, climate risk, and insurance."
+  tagline = "Economist working on real estate, climate risk, and insurance."
   description = "Personal website of John Morehouse - economist and researcher."
   profile_image = "/images/profile.png"
+  roles = ["real estate", "climate risk", "insurance"]
 
   [params.social]
     email = "john.morehouse7@gmail.com"
