@@ -7,7 +7,7 @@
   year: "2025"
   venue: "Journal of the Association of Environmental and Resource Economists"
   title: "Downwind and Out: The Strategic Dispersion of Power Plants and Their Pollution"
-  summary: "Shows that decision-makers deliberately built coal power plants near downwind borders so their pollution drifts into neighboring counties and states, dodging local regulation."
+  summary: "Documents the geography of US power plants and their emissions and highlights the challenges federalism poses for air-quality regulation."
   abstract: "In federalist systems, local governments can maximize local welfare by exporting locally-produced negative externalities. We empirically substantiate this externality-export strategy for air pollution using historical power-plant sitings, administrative borders, and prevailing wind directions. Using a simple, non-parametric test, we show that decision-makers disproportionately sited coal-fueled plants to reduce counties'/states' downwind pollution exposure. Natural-gas-fueled plants—lower polluters—did not follow this strategy. We then illustrate the extreme exportability of coal plants' pollution: within 6 hours, 50% of coal plants' emissions leave their source states—and 99% depart source counties. These results highlight how local strategic responses challenge federalist systems."
   coauthors:
     - { name: "Ed Rubin", url: "https://edrub.in/" }
@@ -20,7 +20,7 @@
   year: "2022"
   venue: "Quantitative Economics, 13(1): 179–223"
   title: "The Environmental Cost of Land-Use Restrictions"
-  summary: "Uses a model of where people live to show that strict housing rules in clean, low-emission cities like California's push households toward dirtier cities, raising carbon emissions."
+  summary: "Examines how local land-use restrictions shape where households live and, in turn, the level and spatial distribution of residential carbon emissions across US cities."
   abstract: "Cities with cleaner power plants and lower energy demand tend also to have tighter land-use restrictions; these restrictions increase housing prices and reduce the incentive for households to live in these lower greenhouse gas-emitting cities. We use a spatial equilibrium model to quantify the overall effects of land-use restrictions on the levels and spatial distribution of household carbon emissions. Our model features heterogeneous households, cities that vary in both their power plant technologies and their utility benefits of energy usage, as well as endogenous wages and rents. Relaxation of the current land-use restrictions in California to the level faced by the median urban household in the US leads to a 0.6% drop in national household carbon emissions and a decrease in the social cost of carbon of $310 million annually."
   coauthors:
     - { name: "Mark Colas", url: "https://sites.google.com/site/markyaucolas/" }
@@ -34,7 +34,7 @@
   year: ""
   venue: ""
   title: "Labor Market Power and Spatial Policies"
-  summary: "Builds a model where employers hold wage-setting power and finds that migration subsidies, more than housing reforms, curb that power and reshape who benefits from place-based policies."
+  summary: "Studies how place-based policies interact with employer wage-setting power in a spatial model of US local labor markets."
   abstract: "Spatial models often assume competitive labor markets. However, place-based policies may interact with local monopsony. We build a spatial model with labor market power and estimate it using four decades of U.S. data. We estimate falling wage markdowns, driven by increased job-switching across industries and growth in the number of local firms. Raising housing supply elasticities in large productive locations increases welfare but has little impact on monopsony, producing aggregate outcomes similar to a competitive model. In contrast, migration subsidies reduce markdowns by increasing labor supply elasticities, yielding different welfare effects from the standard model without monopsony."
   coauthors:
     - { name: "Claudio Luccioletti", url: "https://claudioluccioletti.com/" }
@@ -47,7 +47,7 @@
   year: ""
   venue: ""
   title: "The Distributional Impacts of Climate Change Across US Local Labor Markets"
-  summary: "Finds that climate change hits Black and low-income households hardest because they are more exposed and less able to move, and evaluates a federal policy that subsidizes such places."
+  summary: "Measures how the welfare effects of climate change differ across US households by income and race, and evaluates a place-based policy from the Inflation Reduction Act."
   abstract: "Climate change has affected households around the globe, but its impacts are not homogenous across space. We first show that disadvantaged demographic groups are disproportionately exposed to climate change in the US and are less responsive in their adaptive behavior. Motivated by these findings, we develop and estimate a spatial equilibrium model of US local labor markets, allowing households to adapt to climate change by choosing where to live and, conditional on that choice, energy and housing consumption. Our results show that climate change to date has caused welfare losses 20% larger for Black households relative to white households and twice as large for the lowest income decile relative to the highest income decile. We estimate that these gaps will continue to grow under projections of the future climate. Both the population's ex-ante distribution and differential mobility contribute to the observed disparities. We then evaluate a $3 billion place-based policy from the Inflation Reduction Act, quantifying the tradeoff between subsizing places with high climate damages and the resulting in-migration to climate-exposed areas."
   coauthors:
     - { name: "Emmett Reynier", url: "https://www.emmettreynier.com/" }
@@ -59,7 +59,7 @@
   year: ""
   venue: ""
   title: "Carbon Taxes in Spatial Equilibrium"
-  summary: "Models a US carbon tax and finds it falls hardest on non-college manufacturing workers in the Midwest and South, but pairing it with progressive rebates can even lower total emissions."
+  summary: "Quantifies how the burden of a stylized US carbon tax falls across cities, sectors, and education groups, and how progressive compensation affects aggregate emissions."
   abstract: "Residential, industrial, and commercial carbon dioxide emissions vary substantially across cities and sectors; this variation has led to concerns about the distributional consequences of carbon pricing policies. I develop and estimate a spatial equilibrium model to quantify the incidence from a stylized carbon tax across cities, sectors, and education groups in the U.S. The model features heterogeneous households, firms in multiple locations, sectors that use energy and labor as imperfect substitutes, and region-specific carbon emissions rates due to differences in the fuel mix used to generate electricity. A uniform carbon tax has substantial distributional effects, with non-college-educated manufacturing workers living in the Midwest and South bearing the greatest burden. Cities with mild climates, carbon-efficient power plants, and services-oriented economies experience modest population increases as households move in response to the carbon tax. The share of the total tax burden attributable to coal-fired electricity varies significantly across regions. Additionally, I use the model to demonstrate that progressive compensation leads to a decline in aggregate carbon emissions due to a reallocation of workers into cities and less carbon-intensive sectors."
   award: "Best Graduate Student Research Paper, University of Oregon"
   coauthors: []
@@ -72,7 +72,7 @@
   year: ""
   venue: ""
   title: "In Search of Peace and Quiet: The Heterogeneous Impacts of Short-Term Rentals on Housing Prices"
-  summary: "Shows that short-term rentals like Airbnb can actually lower housing prices in some areas by reducing local nuisances, complicating the case for restricting them."
+  summary: "Analyzes how short-term rentals affect housing prices, showing the direction of the effect depends on their net impact on local amenities."
   abstract: "The supply of housing for short-term rental (STR) has grown dramatically with the emergence of platforms such as Airbnb. This trend has led to contradictory concerns about increasing housing prices and negative externalities. We provide evidence that in some areas, STRs can decrease housing prices. Using a parsimonious model of housing occupancy with externalities, we show that the marginal effect of STRs on housing prices depends on the net impact of STRs on local amenities. Using postal code level data from Los Angeles County, California, we show heterogeneity in the marginal effects of Airbnb listings on housing prices across localities. We then examine the consequences of a 2015 law restricting STRs within the City of Santa Monica in the coastal region of Los Angeles County. In that city, we estimate a negative relationship between the prevalence of STRs and housing prices. Using a synthetic control approach, we provide evidence that the 2015 law may have increased housing prices—and likely did not decrease housing prices—which can be rationalized by our theory. Finally, we provide evidence for a potential mechanism: public intoxication calls to the Santa Monica Police Department decreased after the policy was enacted."
   coauthors:
     - { name: "Brett Garcia", url: "https://brettgarcia.com/" }
