@@ -17,7 +17,7 @@
   --font-display: "Display", "Segoe UI", system-ui, sans-serif;
   --font-body: "Body", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --max-width: 960px;
+  --max-width: 1140px;
   --space: 1.5rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -103,9 +103,8 @@ a:hover {
 }
 
 /* Home page hero — full height, left-weighted, bottom scroll cue */
-.hero { position: relative; display: grid; grid-template-columns: 1fr auto;
-        gap: 2rem 3rem; align-items: center; align-content: center;
-        min-height: calc(100vh - 4rem); padding: 4rem 0 5rem; }
+.hero { position: relative; display: flex; flex-direction: column;
+        justify-content: center; min-height: calc(100vh - 4rem); padding: 4rem 0 5rem; }
 .hero__name { font-family: var(--font-display); font-weight: 700;
               font-size: clamp(3.5rem, 12vw, 8rem); line-height: 0.92;
               letter-spacing: -0.04em; }
@@ -190,7 +189,7 @@ a:hover {
 .photostrip__item { overflow: hidden; border-radius: 8px; margin: 0; }
 .photostrip__item:nth-child(2), .photostrip__item:nth-child(4) { transform: translateY(2rem); }
 .photostrip__item img { width: 100%; height: 240px; object-fit: cover; display: block;
-                        transition: transform 0.5s var(--ease); }
+                        cursor: zoom-in; transition: transform 0.5s var(--ease); }
 .photostrip__item:hover img { transform: scale(1.06); }
 .photostrip__item figcaption { font-size: 0.8rem; color: var(--ink-soft); padding: 0.5rem 0.1rem; }
 @media (max-width: 640px) {
@@ -387,11 +386,16 @@ footer .container {
 .paper {
   padding: 2rem 0;
   border-top: 1px solid var(--line);
+  cursor: pointer;
   transition: transform 0.3s var(--ease);
 }
 
 .paper:hover {
   transform: translateX(4px);
+}
+
+.paper:hover .paper__title {
+  color: var(--green);
 }
 
 .paper__meta {
@@ -433,6 +437,30 @@ footer .container {
   color: var(--ink-soft);
   max-width: 42rem;
   margin-bottom: 1rem;
+}
+
+.paper__summary {
+  color: var(--ink-soft);
+  max-width: 42rem;
+  margin-bottom: 0.75rem;
+}
+
+.paper__more {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 0.25rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--green);
+  cursor: pointer;
+  transition: color 0.2s var(--ease);
+}
+
+.paper__more:hover {
+  color: var(--green-hover);
 }
 
 .paper__links {
@@ -499,4 +527,111 @@ footer .container {
   color: var(--ink-soft);
   max-width: 42rem;
   margin-top: 0.5rem;
+}
+
+/* Lightbox (photo enlarge) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: rgba(22, 19, 13, 0.85);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+.lightbox.is-open {
+  opacity: 1;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__img {
+  max-width: 90%;
+  max-height: 82%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox__caption {
+  color: var(--paper);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--paper);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Paper abstract modal */
+.paper-modal {
+  max-width: 640px;
+  width: calc(100% - 2rem);
+  padding: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.paper-modal::backdrop {
+  background: rgba(22, 19, 13, 0.6);
+}
+
+.paper-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.paper-modal__close:hover {
+  color: var(--ink);
+}
+
+.paper-modal__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+
+.paper-modal__meta {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.paper-modal__abstract {
+  color: var(--ink);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
 }

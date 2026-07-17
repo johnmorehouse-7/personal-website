@@ -5,15 +5,20 @@
   </header>
   <div class="papers">
     {{ range sort site.Data.papers "order" }}
-    <article class="paper" data-reveal>
+    <article class="paper" data-reveal data-paper-card aria-controls="paper-{{ .order }}">
       <div class="paper__meta">
         {{ with .year }}<span>{{ . }}</span>{{ end }}
         <span class="paper__status">{{ .status }}{{ with .venue }} · {{ . }}{{ end }}</span>
       </div>
       <h3 class="paper__title">{{ .title }}</h3>
-      {{ with .coauthors }}<p class="paper__authors">{{ . }}</p>{{ end }}
+      {{ with .coauthors }}
+      <p class="paper__authors">with
+        {{ range $i, $c := . }}{{ if $i }}, {{ end }}{{ if $c.url }}<a href="{{ $c.url }}" target="_blank" rel="noopener">{{ $c.name }}</a>{{ else }}{{ $c.name }}{{ end }}{{ end }}
+      </p>
+      {{ end }}
       {{ with .award }}<p class="paper__award">★ {{ . }}</p>{{ end }}
-      {{ with .abstract }}<p class="paper__abstract">{{ . }}</p>{{ end }}
+      {{ with .summary }}<p class="paper__summary">{{ . }}</p>{{ end }}
+      <button class="paper__more" data-paper-open="paper-{{ .order }}" type="button">Read abstract →</button>
       {{ with .links }}
       {{ $links := where . "url" "!=" "" }}
       {{ with $links }}
@@ -23,6 +28,25 @@
       {{ end }}
       {{ end }}
     </article>
+    <dialog class="paper-modal" id="paper-{{ .order }}">
+      <button class="paper-modal__close" data-paper-close type="button" aria-label="Close">×</button>
+      <p class="paper-modal__meta">{{ with .year }}{{ . }} · {{ end }}{{ .status }}{{ with .venue }} · {{ . }}{{ end }}</p>
+      <h3 class="paper-modal__title">{{ .title }}</h3>
+      {{ with .coauthors }}
+      <p class="paper__authors">with
+        {{ range $i, $c := . }}{{ if $i }}, {{ end }}{{ if $c.url }}<a href="{{ $c.url }}" target="_blank" rel="noopener">{{ $c.name }}</a>{{ else }}{{ $c.name }}{{ end }}{{ end }}
+      </p>
+      {{ end }}
+      {{ with .abstract }}<p class="paper-modal__abstract">{{ . }}</p>{{ end }}
+      {{ with .links }}
+      {{ $links := where . "url" "!=" "" }}
+      {{ with $links }}
+      <div class="paper__links">
+        {{ range . }}<a class="btn-ghost" href="{{ .url }}"{{ if not (hasPrefix .url "/") }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>{{ end }}
+      </div>
+      {{ end }}
+      {{ end }}
+    </dialog>
     {{ end }}
   </div>
 </section>
