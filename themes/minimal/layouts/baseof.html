@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-  {{ $css := resources.Get "css/main.css" | minify }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-  {{/* Publish + preload self-hosted fonts so @font-face url("../fonts/…") resolves */}}
+  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{/* Publish all six faces so @font-face url("../fonts/…") resolves; preload only the two critical faces (hero name + body). */}}
+  {{ $preload := slice "fraunces-700" "inter-400" }}
   {{ range slice "fraunces-400" "fraunces-600" "fraunces-700" "inter-400" "inter-500" "inter-600" }}
     {{ with resources.Get (printf "fonts/%s.woff2" .) }}
       {{ .Publish }}
-      <link rel="preload" href="{{ .RelPermalink }}" as="font" type="font/woff2" crossorigin>
+    {{ end }}
+    {{ if in $preload . }}
+      {{ with resources.Get (printf "fonts/%s.woff2" .) }}
+        <link rel="preload" href="{{ .RelPermalink }}" as="font" type="font/woff2" crossorigin>
+      {{ end }}
     {{ end }}
   {{ end }}
 </head>
@@ -32,5 +37,7 @@
       {{ site.Params.footer | default (printf "© %d %s" now.Year site.Title) }}
     </div>
   </footer>
+  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </body>
 </html>
