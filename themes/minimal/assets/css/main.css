@@ -105,19 +105,6 @@ a:hover {
 /* Home page hero — full height, left-weighted, bottom scroll cue */
 .hero { position: relative; display: flex; flex-direction: column;
         justify-content: center; min-height: calc(100vh - 4rem); padding: 4rem 0 5rem; }
-/* Faint topographic contour motif behind the hero (spatial/geography nod). */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: -2rem -1.5rem;
-  background: url("/images/topo.svg") center / cover no-repeat;
-  opacity: 0.5;
-  z-index: 0;
-  pointer-events: none;
-  -webkit-mask-image: radial-gradient(120% 90% at 78% 38%, #000 28%, transparent 80%);
-          mask-image: radial-gradient(120% 90% at 78% 38%, #000 28%, transparent 80%);
-}
-.hero__text, .hero__scroll { position: relative; z-index: 1; }
 .hero__name { font-family: var(--font-display); font-weight: 700;
               font-size: clamp(3.5rem, 12vw, 8rem); line-height: 0.92;
               letter-spacing: -0.04em; }
