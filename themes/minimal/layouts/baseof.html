@@ -24,14 +24,6 @@
   <noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="/#top" class="site-title">{{ site.Title }}</a>
-      <nav>
-        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-      </nav>
-    </div>
-  </header>
   <main>
     {{ block "main" . }}{{ end }}
   </main>

@@ -55,84 +55,6 @@ main {
   padding: 2rem 1.5rem;
 }
 
-/* Header */
-header {
-  border-bottom: 1px solid var(--line);
-  padding: 1.5rem 0;
-  background: var(--paper);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-header .container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.site-title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--ink);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.site-title:hover {
-  color: var(--green);
-  text-decoration: none;
-}
-
-/* Navigation */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  position: relative;
-  color: var(--ink-soft);
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  height: 2px;
-  width: 100%;
-  background: var(--green);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s var(--ease);
-}
-
-nav a:hover {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-nav a:hover::after {
-  transform: scaleX(1);
-}
-
-nav a.active {
-  color: var(--green);
-}
-
 /* Keyboard focus indicator (keyboard nav only, not mouse clicks) */
 a:focus-visible,
 .btn:focus-visible,
@@ -325,15 +247,6 @@ footer .container {
   html {
     font-size: 16px;
   }
-
-  header .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    justify-content: center;
-  }
 }
 
 /* Motion */
@@ -398,18 +311,19 @@ footer .container {
 }
 
 .section {
-  scroll-margin-top: 5rem;
-  padding-top: 3rem;
-  margin-top: 3rem;
-  border-top: 1px solid var(--line);
+  margin-top: 6rem;
 }
 
+/* Quiet, understated section label (matches the updates label) so the page
+   reads as one continuous document rather than stacked, boxed pages. */
 .section-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2rem, 4.5vw, 3rem);
-  letter-spacing: -0.02em;
-  margin: 0 0 2rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
 }
 
 .paper {
