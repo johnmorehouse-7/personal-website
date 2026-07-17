@@ -1,0 +1,66 @@
+# Research list. `order` controls display order (never auto-sorts).
+# Published first, then working papers. Abstracts intentionally blank for now.
+# NOTE: two external links still need URLs (marked TODO) and the four slide
+# decks (aere_pres, frb, mea, osweet) still need mapping to papers.
+
+- order: 1
+  status: "Published"
+  year: "2025"
+  venue: "Journal of the Association of Environmental and Resource Economists"
+  title: "Downwind and Out: The Strategic Dispersion of Power Plants and Their Pollution"
+  coauthors: "with Ed Rubin"
+  abstract: ""
+  links:
+    - { label: "Journal", url: "https://www.journals.uchicago.edu/doi/10.1086/740146" }
+
+- order: 2
+  status: "Published"
+  year: "2022"
+  venue: "Quantitative Economics, 13(1): 179–223"
+  title: "The Environmental Cost of Land-Use Restrictions"
+  coauthors: "with Mark Colas"
+  abstract: ""
+  links:
+    - { label: "Journal", url: "" }  # TODO: Quantitative Economics URL
+    - { label: "Minneapolis Fed coverage", url: "" }  # TODO
+
+- order: 3
+  status: "Working paper"
+  year: ""
+  venue: ""
+  title: "Labor Market Power and Spatial Policies"
+  coauthors: "with Claudio Luccioletti and Sophie Mathes"
+  abstract: ""
+  links:
+    - { label: "Draft", url: "https://cdn.sanity.io/files/l721pa75/production/39b32e107554e81d2f34b5c63bd6fd10155dcc9f.pdf" }
+
+- order: 4
+  status: "Working paper"
+  year: ""
+  venue: ""
+  title: "The Distributional Impacts of Climate Change Across US Local Labor Markets"
+  coauthors: "with Emmett Reynier"
+  abstract: ""
+  links:
+    - { label: "Draft", url: "/files/papers/reynier-morehouse-climate-migration.pdf" }
+
+- order: 5
+  status: "Working paper"
+  year: ""
+  venue: ""
+  title: "Carbon Taxes in Spatial Equilibrium"
+  coauthors: ""
+  award: "Best Graduate Student Research Paper, University of Oregon"
+  abstract: ""
+  links:
+    - { label: "Draft", url: "/files/papers/jmp.pdf" }
+
+- order: 6
+  status: "Working paper"
+  year: ""
+  venue: ""
+  title: "In Search of Peace and Quiet: The Heterogeneous Impacts of Short-Term Rentals on Housing Prices"
+  coauthors: "with Brett Garcia and Keaton Miller"
+  abstract: ""
+  links:
+    - { label: "Draft", url: "/files/papers/airbnb.pdf" }
