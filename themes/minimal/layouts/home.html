@@ -5,12 +5,13 @@
       <span class="hero__name-line">John</span>
       <span class="hero__name-line">Morehouse</span>
     </h1>
-    <p class="hero__tag" data-reveal>
-      economist working on
-      <span class="hero__cycle" data-cycle>{{ index site.Params.roles 0 }}</span>
-    </p>
     <div class="hero__introRow" data-reveal>
+      {{ with site.Params.profile_image }}<img src="{{ . }}" alt="John Morehouse" class="hero__photo">{{ end }}
       <div class="hero__introCol">
+        <p class="hero__tag">
+          economist working on
+          <span class="hero__cycle" data-cycle>{{ index site.Params.roles 0 }}</span>
+        </p>
         <div class="hero__intro">{{ .Content }}</div>
         {{ with site.Params.social }}
         <nav class="hero__links" aria-label="Profiles">
@@ -22,7 +23,6 @@
         </nav>
         {{ end }}
       </div>
-      {{ with site.Params.profile_image }}<img src="{{ . }}" alt="John Morehouse" class="hero__photo">{{ end }}
     </div>
   </div>
   <a class="hero__scroll" href="#about" aria-label="Scroll to content">
