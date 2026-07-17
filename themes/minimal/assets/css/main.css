@@ -170,6 +170,23 @@ a:hover {
   .hero__photo { width: 88px; height: 88px; order: -1; }
 }
 
+/* Section heading (small caps label) */
+.section-h { font-family: var(--font-body); font-size: 0.8rem; text-transform: uppercase;
+             letter-spacing: 0.12em; color: var(--ink-soft); font-weight: 600; margin: 4rem 0 1.5rem; }
+
+/* Updates feed */
+.feed { list-style: none; }
+.feed__row { display: grid; grid-template-columns: 6rem 1fr; gap: 1.5rem;
+             padding: 1.25rem 0; border-top: 1px solid var(--line); align-items: baseline; }
+.feed__date { color: var(--ink-soft); font-size: 0.9rem; }
+.feed__tag { display: inline-block; font-size: 0.68rem; text-transform: uppercase;
+             letter-spacing: 0.08em; color: var(--green); border: 1px solid var(--green);
+             border-radius: 999px; padding: 0.1rem 0.6rem; margin-right: 0.75rem; white-space: nowrap; }
+.feed__title { font-weight: 500; color: var(--ink); }
+.feed__title:hover { color: var(--green); text-decoration: none; }
+.feed__row:hover .feed__title { color: var(--green); }
+@media (max-width: 640px) { .feed__row { grid-template-columns: 1fr; gap: 0.5rem; } }
+
 /* Content */
 .content {
   max-width: 100%;
