@@ -103,7 +103,7 @@ a:hover {
 }
 
 /* Home page hero — full height, left-weighted, bottom scroll cue */
-.hero { position: relative; display: grid; grid-template-columns: 1fr auto;
+.hero { position: relative; display: grid; grid-template-columns: auto 1fr;
         align-items: center; gap: 3.5rem; min-height: calc(100vh - 4rem); padding: 4rem 0 5rem; }
 .hero__name { font-family: var(--font-display); font-weight: 700;
               font-size: clamp(3.5rem, 12vw, 8rem); line-height: 0.92;
@@ -121,7 +121,7 @@ a:hover {
   transition: transform 0.3s var(--ease); }
 .hero__links a:hover { text-decoration: none; }
 .hero__links a:hover::after { transform: scaleX(1); }
-.hero__photo { width: clamp(230px, 26vw, 330px); height: min(62vh, 500px);
+.hero__photo { order: -1; width: clamp(230px, 26vw, 330px); height: min(62vh, 500px);
                object-fit: cover; border-radius: 12px; align-self: center; }
 
 /* Scroll cue at the bottom of the hero */
