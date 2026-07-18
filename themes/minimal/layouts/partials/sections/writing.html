@@ -1,0 +1,33 @@
+<section id="writing" class="section" data-reveal-group aria-labelledby="writing-h">
+  <header class="section__head" data-reveal>
+    <h2 id="writing-h" class="section__title">Writing</h2>
+  </header>
+  <p class="writing-intro" data-reveal>Essays and notes, published on my <a href="{{ site.Params.social.substack }}" target="_blank" rel="noopener">Substack</a>.</p>
+  {{ $items := slice }}
+  {{ with (try (resources.GetRemote "https://morehouses.substack.com/feed")) }}
+    {{ with .Value }}
+      {{ $data := .Content | transform.Unmarshal }}
+      {{ $channel := or $data.channel $data }}
+      {{ with $channel.item }}{{ $items = . }}{{ end }}
+    {{ end }}
+  {{ end }}
+  {{ with $items }}
+  <ul class="posts">
+    {{ range first 6 . }}
+    {{ $raw := .pubDate }}
+    {{ $date := "" }}
+    {{ if $raw }}
+      {{ $t := try (time.AsTime $raw) }}
+      {{ if $t.Value }}{{ $date = $t.Value.Format "January 2, 2006" }}{{ end }}
+    {{ end }}
+    <li class="post" data-reveal>
+      <a class="post__title" href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+      {{ with $date }}<span class="post__date">{{ . }}</span>{{ end }}
+      <p class="post__desc">{{ .description | plainify | truncate 160 }}</p>
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <a class="btn-ghost" data-reveal href="{{ site.Params.social.substack }}" target="_blank" rel="noopener">Read on Substack →</a>
+  {{ end }}
+</section>

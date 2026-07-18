@@ -1,0 +1,13 @@
+<section class="updates" data-reveal-group aria-labelledby="updates-h">
+  <h2 id="updates-h" class="section-h" data-reveal>Recent updates</h2>
+  <ul class="feed">
+    {{ range $i, $u := site.Data.updates }}
+    <li class="feed__row" data-reveal style="transition-delay: {{ mul $i 80 }}ms">
+      <span class="feed__date">{{ .date }}</span>
+      <div class="feed__body">
+        <a class="feed__title" href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</section>

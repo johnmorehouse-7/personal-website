@@ -1,0 +1,14 @@
+<section id="about" class="section" data-reveal-group aria-labelledby="about-h">
+  <header class="section__head" data-reveal>
+    <h2 id="about-h" class="section__title">About</h2>
+  </header>
+  <div class="prose" data-reveal>
+    {{ with site.GetPage "/about" }}{{ .Content }}{{ end }}
+  </div>
+  <div class="photostrip" aria-label="Photos">
+    <figure class="photostrip__item" data-reveal><img loading="lazy" src="/images/croatia.jpg" alt="Croatia"><figcaption>Croatia</figcaption></figure>
+    <figure class="photostrip__item" data-reveal><img loading="lazy" src="/images/lucerne.jpg" alt="Lucerne"><figcaption>Lucerne</figcaption></figure>
+    <figure class="photostrip__item" data-reveal><img loading="lazy" src="/images/gravel.jpeg" alt="Gravel riding"><figcaption>Gravel riding</figcaption></figure>
+    <figure class="photostrip__item" data-reveal><img loading="lazy" src="/images/hains.jpeg" alt="Cycling at Hains Point"><figcaption>Cycling at Hains Point</figcaption></figure>
+  </div>
+</section>
