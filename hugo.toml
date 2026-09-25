@@ -17,7 +17,7 @@ theme = 'minimal'
 
   [params.social]
     email = "john.morehouse7@gmail.com"
-    linkedin = "https://www.linkedin.com/in/johnmorehouse"
+    linkedin = "https://www.linkedin.com/in/johnmmorehouse/"
     github = "https://github.com/johnmorehouse-7"
     substack = "https://morehouses.substack.com/"
     # twitter = "https://twitter.com/yourhandle"
