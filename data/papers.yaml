@@ -40,7 +40,7 @@
     - { name: "Claudio Luccioletti", url: "https://claudioluccioletti.com/" }
     - { name: "Sophie Mathes", url: "https://sophie-mathes.com/" }
   links:
-    - { label: "Draft", url: "https://cdn.sanity.io/files/l721pa75/production/39b32e107554e81d2f34b5c63bd6fd10155dcc9f.pdf" }
+    - { label: "Draft", url: "https://cdn.sanity.io/files/l721pa75/production/739e6042ceb1106875345076bcdb1e10395e9fd6.pdf" }
 
 - order: 4
   status: "Working paper"

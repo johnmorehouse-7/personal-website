@@ -60,7 +60,7 @@ Won "Best Graduate Student Research Paper" award (University of Oregon)
 
 **Labor Market Power and Spatial Policies**
 *with Claudio Luccioletti and Sophie Mathes*
-[Draft](https://cdn.sanity.io/files/l721pa75/production/39b32e107554e81d2f34b5c63bd6fd10155dcc9f.pdf)
+[Draft](https://cdn.sanity.io/files/l721pa75/production/739e6042ceb1106875345076bcdb1e10395e9fd6.pdf)
 
 ---
 
